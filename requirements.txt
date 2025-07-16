@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+joblib
+scikit-learn==1.7.0
+xgboost
+pydantic
+streamlit
+requests
+matplotlib
+shap
+numpy>=1.26
+plotly
