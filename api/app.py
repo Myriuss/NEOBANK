@@ -50,7 +50,9 @@ payload = {
     "nb_incidents": float(client_data["nb_incidents"])
 }
 
-response = requests.post("http://127.0.0.1:8000/predict", json=payload)
+API_URL = "https://neobank-zzye.onrender.com/predict"
+response = requests.post(API_URL, json=payload)
+
 
 if response.status_code == 200:
     score = response.json()["score_credit"]
