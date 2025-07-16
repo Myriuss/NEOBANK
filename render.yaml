@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: neobank-api
+    runtime: python
+    repo: https://github.com/Myriuss/NEOBANK.git
+    branch: master
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn api.main:app --host 0.0.0.0 --port 10000"
+    envVars:
+      - key: PORT
+        value: 10000
+    plan: free
